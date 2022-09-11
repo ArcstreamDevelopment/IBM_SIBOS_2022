@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LogoAnimatorScript : MonoBehaviour
 {
+    public GameObject Curtain;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,16 @@ public class LogoAnimatorScript : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void ShowCurtain()
+    {
+        Curtain.SetActive(true);
+    }
+
+    public void CloseLines()
+    {
+        gameObject.SetActive(false);
     }
 
 }

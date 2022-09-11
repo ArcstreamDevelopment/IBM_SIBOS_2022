@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18154612, g: 0.22718859, b: 0.30740714, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -361,12 +361,12 @@ GameObject:
   m_Component:
   - component: {fileID: 245698605}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CurtainContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &245698605
 Transform:
   m_ObjectHideFlags: 0
@@ -375,8 +375,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245698604}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.09, z: 5}
-  m_LocalScale: {x: 10, y: 26, z: 10}
+  m_LocalPosition: {x: 0, y: 1, z: 5}
+  m_LocalScale: {x: 9.4, y: 25.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1358942134}
@@ -969,6 +969,7 @@ GameObject:
   - component: {fileID: 694775160}
   - component: {fileID: 694775161}
   - component: {fileID: 694775159}
+  - component: {fileID: 694775162}
   m_Layer: 5
   m_Name: IBMLogoContainer
   m_TagString: Untagged
@@ -1010,6 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77092b2344f437f47b5862c6d0a9e69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Curtain: {fileID: 245698604}
 --- !u!222 &694775160
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1038,6 +1040,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &694775162
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694775157}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &710135327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,7 +1157,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1201,14 +1215,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953419856}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.014703778, y: 0.9231974, z: -0.38240087, w: 0.03549806}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 175.596, z: 0}
 --- !u!114 &953419859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,6 +1965,7 @@ GameObject:
   - component: {fileID: 1358942137}
   - component: {fileID: 1358942136}
   - component: {fileID: 1358942135}
+  - component: {fileID: 1358942139}
   m_Layer: 0
   m_Name: Curtain
   m_TagString: Untagged
@@ -1986,7 +2001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _logo: {fileID: 2800000, guid: 96b2057b71a117b42b43efafb7f67d5f, type: 3}
-  _advancedMode: 0
+  _advancedMode: 1
   _runSim: 1
   _timestep: 0.004
   _timeMultiplier: 1
@@ -2028,7 +2043,7 @@ MonoBehaviour:
   _useCollisionFinder: 1
   _useCustomVoxelCenter: 0
   _customVoxelCenter: {fileID: 1358942134}
-  _voxelCubeScale: 160
+  _voxelCubeScale: 287041.03
   _voxelCubeSteps: 32
   _meshObjects:
   - {fileID: 1358942134}
@@ -2053,8 +2068,8 @@ MonoBehaviour:
     _useDirectDispatch: 0
     _unifiedSphereSize: 0
   _gridOffset:
-    x: -21.86387
-    y: 0.092137694
+    x: 2186.387
+    y: 23955.812
     z: 0
   _predictiveContact: 0
   _useSelfCollision: 1
@@ -6764,6 +6779,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358942133}
   m_Mesh: {fileID: 4300000, guid: af332eb3bfb06da468b495d77772a4d8, type: 2}
+--- !u!114 &1358942139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358942133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0646164802b4c104c900667fdede624f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385195895
 GameObject:
   m_ObjectHideFlags: 0
@@ -6916,6 +6943,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514014811}
   m_CullTransparentMesh: 1
+--- !u!1 &1525975344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525975345}
+  - component: {fileID: 1525975346}
+  m_Layer: 0
+  m_Name: MainScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1525975345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525975344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525975346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525975344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9f776bbc2aba34d86acecc17ecc4cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1559606285
 GameObject:
   m_ObjectHideFlags: 0

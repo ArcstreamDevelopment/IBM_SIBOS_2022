@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LogoAnimatorScript : MonoBehaviour
 {
-    public GameObject Bar8Container;
-    public Animator Bar16Animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +13,7 @@ public class LogoAnimatorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void Show16Bars()
-    {
-        Bar8Container.SetActive(false);
-        Bar16Animator.gameObject.SetActive(true);
-        Bar16Animator.SetBool("Show", true);
-    }
 }
